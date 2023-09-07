@@ -1,24 +1,33 @@
-# README
+#### 1. Install Ruby 3.0.0
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Install RVM](https://rvm.io/rvm/install)
 
-Things you may want to cover:
+After installing go to project directory and install 3.0.0 ruby version
+```
+cd [your-path]/[project-name]
+rvm install 3.0.0
+```
 
-* Ruby version
+#### 2. Install PostgreSQL
 
-* System dependencies
+Just example:
+```
+sudo apt-get update
+sudo apt-get install postgresql postgresql-contrib
+sudo -u postgres psql
+```
+#### 3. Create the databases
+```
+bundle install
+bundle exec rails db:setup or rails db:migrate
+```
 
-* Configuration
+### 4. Run Seed file
+```
+rails db:seed
+```
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Run server
+```
+rails s
+```
